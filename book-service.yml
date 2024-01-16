@@ -1,0 +1,9 @@
+server.port: 9456
+resilience4j:
+  circuitbreaker:
+    instances:
+      author-client:
+        slidingWindowSize: 10 #Cantidad de peticiones a analizar
+        failureRateThreshold: 50 # porcentaje de límite de fallo
+        waitDurationInOpenState: 20s # El tiempo de espera en estado abierto
+        permittedNumberOfCallsInHalfOpenState: 3 #Cantidad de peticiones a analizar en semi-abierto

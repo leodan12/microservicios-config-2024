@@ -1,0 +1,2 @@
+server.port: 9455
+strategy.default: rest-template
